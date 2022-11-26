@@ -1,0 +1,24 @@
+.main {
+    margin-top: 65px;
+}
+
+.contentDashboardEvaluate {
+    display: flex;
+    margin-top: 75px;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.contentDashboardEvaluate .MuiPaper-root {
+    border: 1px solid silver;
+    height: 22vh;
+}
+
+.graphiques .MuiPaper-root {
+    border: 1px solid silver;
+    gap: 1rem;
+}
+
+.graphiques{
+    padding: 1rem;
+}

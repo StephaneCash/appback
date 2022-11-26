@@ -1,0 +1,19 @@
+.leftbar{
+    background-color: red !important;
+}
+.leftbar a {
+    text-decoration: none !important;
+    color: #333 !important; 
+    font-weight: 500 !important;
+}
+
+.active {
+    border-left: 3px solid #0c50a2;
+    background-color: #fff !important;
+    padding: 5px !important;
+    width: 100% !important;
+}
+.MuiTypography-body1{
+    font-size: 15px !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
