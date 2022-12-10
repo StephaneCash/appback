@@ -7,10 +7,10 @@ import swal from "sweetalert";
 
 
 function AddEleve() {
-    const initialiseValues = { id: "", nom: "", postnom: "", prenom: "", sexe: "", filiereId: "" };
+    const initialiseValues = { id: "", nom: "", postnom: "", prenom: "", sexe: "", filiereId: "", note: '' };
     const [formData, setFormData] = useState(initialiseValues);
 
-    const { id, nom, postnom, prenom, sexe, filiereId, } = formData;
+    const { id, nom, postnom, prenom, sexe, filiereId, note } = formData;
 
     const [filieres, setFilieres] = useState([]);
 
@@ -37,7 +37,7 @@ function AddEleve() {
     const submitData = () => {
         if (state) {
             axios.put(`http://localhost:5000/api/eleves/${id}`, {
-                nom: nom, postnom: postnom, prenom: prenom, sexe: sexe,
+                nom: nom, postnom: postnom, prenom: prenom, sexe: sexe, note: note,
                 filiereId: filiereId
             })
                 .then(resp => {
@@ -51,7 +51,7 @@ function AddEleve() {
         } else {
             axios.post(`http://localhost:5000/api/eleves`, {
                 nom: nom, postnom: postnom, prenom: prenom, sexe: sexe,
-                filiereId: filiereId,
+                filiereId: filiereId, note: note
             })
                 .then(resp => {
                     console.log(resp)
@@ -147,6 +147,8 @@ function AddEleve() {
                                             }) : 'Aucune donnée.'}
 
                                         </select>
+                                        <label>Cote manip</label>
+                                        <input type="number" id="note" value={note} className="form-control" placeholder='Cote' />
                                     </div>
                                 </div>
                                 <div className='mt-3'>

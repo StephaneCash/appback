@@ -68,7 +68,7 @@ function AddManip() {
                     <div className='getAllEleves' style={{ padding: "1rem" }}>
                         <div className='col-sm-6'>
                             <h6>
-                                <NavLink to="/eleves">
+                                <NavLink to="/manip">
                                     <i className='fa fa-chevron-left'></i> Retour
                                 </NavLink>
                             </h6>

@@ -41,7 +41,7 @@ function Login() {
     const connecter = () => {
         setBtnState(true);
 
-        const url = 'http://localhost:5000/api/user/login';
+        const url = 'http://localhost:5000/api/user/authentification';
 
         if (pwd !== "" && email !== "") {
             axios.post(url, { email, password: pwd }).then(res => {
@@ -51,7 +51,7 @@ function Login() {
                     localStorage.setItem('user', JSON.stringify(res.data));
                 }
 
-                navigate('/');
+                navigate('/dashboard');
                 setBtnState(false);
             }).catch(erreur => {
                 console.log(erreur)

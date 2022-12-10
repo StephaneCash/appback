@@ -1,7 +1,7 @@
 import { AppBar, Avatar, Badge, makeStyles, Toolbar, Typography } from "@material-ui/core";
 import { Mail, Notifications, SettingsPower } from "@material-ui/icons";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     tooBar: {
@@ -37,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = () => {
 
     const classes = useStyles();
+    let navigate = useNavigate();
+
+    const handleDeconncet = () => {
+        navigate("/")
+    }
 
     return (
         <>
@@ -59,7 +64,7 @@ const Navbar = () => {
                             </Badge>
                         </Link>
                         <Avatar style={{ backgroundColor: "#555" }} src="s" />
-                        <SettingsPower className={classes.logout} />
+                        <SettingsPower className={classes.logout} onClick={handleDeconncet} />
                     </div>
                 </Toolbar>
             </AppBar>
